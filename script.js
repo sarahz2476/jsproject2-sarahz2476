@@ -2,10 +2,8 @@ $.ajax({
     url: 'https://data.cityofnewyork.us/resource/uvw5-9znb.json',
     dataType: 'json',
     success: function(data) {
-        // ask the user for a borough + user's answer is the value of the variable
-        var borough = prompt ("Input a New York borough (Make sure to Capitalize the first letters)."); 
-        // title
-        document.write("<b> NYC Council Members that have district office in " + borough + ": </b><br>");
+        var borough = prompt ("Input a New York borough (Make sure to Capitalize the first letters).");  // ask the user for a borough
+        document.write("<b> NYC Council Members that have district office in " + borough + ": </b><br>"); // title
         
       // this loop will go through the list and print out any council members' name with distric office in the borough the user asks for
        for(var i = 0; i < data.length; i++){
